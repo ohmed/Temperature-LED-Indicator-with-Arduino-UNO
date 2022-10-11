@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "author": "Oduor Oduor",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 125.4, "left": -67.8, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 258.4,
+      "left": 519.8,
+      "rotate": 270,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 268,
+      "left": 308.6,
+      "rotate": 270,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 268,
+      "left": 414.2,
+      "rotate": 270,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 202.2,
+      "left": 307.2,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 202.2,
+      "left": 508.8,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 202.2,
+      "left": 412.8,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 378.8,
+      "left": 392.4,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "led2:A", "r1:2", "orange", [ "h0" ] ],
+    [ "r1:1", "uno:6", "orange", [ "v-124.8", "h-172.8", "v48" ] ],
+    [ "led3:A", "r3:2", "yellow", [ "h0" ] ],
+    [ "r3:1", "uno:7", "yellow", [ "v-144", "h-288", "v67.2" ] ],
+    [ "led1:A", "r2:2", "green", [ "h0" ] ],
+    [ "r2:1", "uno:8", "green", [ "v-172.8", "h-403.2", "v96" ] ],
+    [
+      "led2:C",
+      "uno:GND.1",
+      "black",
+      [ "h0", "v57.2", "h432", "v-470.4", "h-816", "v211.2", "h76.8" ]
+    ],
+    [
+      "led3:C",
+      "uno:GND.1",
+      "black",
+      [ "h0", "v38", "h297.6", "v-422.4", "h-768", "v163.2", "h67.2" ]
+    ],
+    [
+      "led1:C",
+      "uno:GND.1",
+      "black",
+      [ "h0", "v18.8", "h153.6", "v-364.8", "h-691.2", "v115.2", "h28.8", "v76.8" ]
+    ],
+    [ "bz1:1", "uno:GND.1", "black", [ "v-96", "h-499.2", "v-259.2", "h124.8" ] ],
+    [ "bz1:2", "uno:5", "pink", [ "v19.2", "h-176.8", "v-364.8", "h-105.6" ] ]
+  ]
+}
